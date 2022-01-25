@@ -1,8 +1,14 @@
-import { getPinBalls1, getPinBalls2 } from './services/promise-me';
+import { useEffect } from 'react';
+import {
+  getPinBalls1,
+  getPinBalls2,
+  get20Machines,
+} from './services/promise-me';
 
 export default function App() {
-  console.log(getPinBalls1());
-  console.log(getPinBalls2());
+  useEffect(() => {
+    get20Machines();
+  });
 
   return <h1>Hello World</h1>;
 }

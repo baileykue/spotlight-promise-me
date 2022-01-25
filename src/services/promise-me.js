@@ -20,6 +20,14 @@ export function getPinBalls2() {
   return response;
 }
 
+export function get20Machines() {
+  const response = fetch(
+    'https://ponball.herokuapp.com/api/v1/machines?limit=20&offset=20'
+  ).then((data) => data.json());
+
+  return response;
+}
+
 /**
  * TODO:
  */
