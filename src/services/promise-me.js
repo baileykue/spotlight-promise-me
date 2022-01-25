@@ -28,6 +28,36 @@ export function get20Machines() {
   return response;
 }
 
+export async function getRandomActivity() {
+  const response = await fetch('http://www.boredapi.com/api/activity/');
+
+  const data = await response.json();
+  console.log(data);
+
+  return data;
+}
+
+export async function getActivityFor1() {
+  const response = await fetch(
+    'http://www.boredapi.com/api/activity?accessibility=1'
+  );
+
+  const data = await response.json();
+  console.log(data);
+
+  return data;
+}
+
+export async function getJokes() {
+  const response = await fetch(
+    'https://v2.jokeapi.dev/joke/Programming?idRange=0-51&amount=10'
+  );
+
+  const data = await response.json();
+
+  return data;
+}
+
 /**
  * TODO:
  */
